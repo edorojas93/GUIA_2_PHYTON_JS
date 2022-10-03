@@ -1,51 +1,33 @@
-let pares = 0, impares = 0;
-function calc(numero1,numero2,numero3,numero4){
-    if(numero1 % 2 !=0){
-        impares = parseInt(numero1) - impares;
-    } else {
-        pares += parseInt(numero1);
-    }
-    if(numero2 % 2 !=0){
-        impares = parseInt(numero2) - impares;
-    } else {
-        pares += parseInt(numero2);
-    }
-    if(numero3 % 2 !=0){
-        impares = parseInt(numero3) - impares;
-    } else {
-        pares += parseInt(numero3);
-    }
-    if(numero4 % 2 !=0){
-        impares = parseInt(numero4) - impares;
-    } else {
-        pares += parseInt(numero4);
-    }
-}
-
 addEventListener("DOMContentLoaded", (e) => {
-    let calcular = document.querySelector("#guia2");
-    calcular.addEventListener("submit", (e) => {
-        e.preventDefault();
-        let numero1 = document.querySelector("#numero1").value;
-        let numero2 = document.querySelector("#numero2").value;
-        let numero3 = document.querySelector("#numero3").value;
-        let numero4 = document.querySelector("#numero4").value;
-        calc(numero1,numero2,numero3,numero4);
-        document.querySelector("#resultado").innerHTML = `La suma de los pares es: ${pares}`;
-        document.querySelector("#impares").innerHTML = `La resta de los impares es: ${impares}`;
-    })
-})
 
-function limpiar(){
-    document.querySelector("#guia2").reset();
-    document.querySelector("#resultado").innerHTML="";
-    document.querySelector("#impares").innerHTML="";
-}
+    //Ciclo de WHILE//
+    let amarilla = 0
+    let rosa = 0
+    let roja = 0
+    let verde = 0
+    let azul = 0
+    let cont = 1;
 
-addEventListener('reset', limpiar);
+    while (cont <= cant) {
+        let nPlaca = prompt('vehiculo #' + cont + ' \n ingrese el ultimo dijito de su placa: ')
 
+        if (nPlaca == 1 || nPlaca == 2) {
+            amarilla++;
+        }
+        else if (nPlaca == 3 || nPlaca == 4) {
+            rosa++;
+ else if (nPlaca == 5 || nPlaca == 6) {
+                roja++;
 
+else if (nPlaca == 8 || nPlaca == 9) {
+                    verde++;
+                }
+                else {
+                    azul++;
+                }
+                cont++;
 
-            
+                alert('# de placas color amarillo: ' + amarilla + '\n# de placas color rosa: ' + rosa + '\n# de placas color rojo: ' + roja + '\n# de placas color averde: ' + verde + '\n# de placas color azul: ' + azul);
+            }  
 
     

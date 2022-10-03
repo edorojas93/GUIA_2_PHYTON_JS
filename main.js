@@ -1,33 +1,28 @@
 addEventListener("DOMContentLoaded", (e) => {
+    let calcular = document.querySelector("#guia2");
+    calcular.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let nota1 = document.querySelector("#nota1").value;
+        let nota2 = document.querySelector("#nota2").value;
+        let nota3 = document.querySelector("#nota3").value;
+        let nota4 = document.querySelector("#nota4").value;
+        let nota5 = document.querySelector("#nota5").value;
+        let promedio = (parseInt(nota1) + parseInt(nota2) + parseInt(nota3) + parseInt(nota4) + parseInt(nota5)) / 5;
+        document.querySelector("#resultado").innerHTML = `Nota promedio: ${promedio}`;
+    })
+})
 
-    //Ciclo de WHILE//
-    let amarilla = 0
-    let rosa = 0
-    let roja = 0
-    let verde = 0
-    let azul = 0
-    let cont = 1;
+function limpiar(){
+    document.querySelector("#guia2").reset();
+    document.querySelector("#resultado").innerHTML="";
+    document.querySelector("#subtotal").innerHTML="";
+    document.querySelector("#iva").innerHTML="";
+}
 
-    while (cont <= cant) {
-        let nPlaca = prompt('vehiculo #' + cont + ' \n ingrese el ultimo dijito de su placa: ')
+addEventListener('reset', limpiar);
 
-        if (nPlaca == 1 || nPlaca == 2) {
-            amarilla++;
-        }
-        else if (nPlaca == 3 || nPlaca == 4) {
-            rosa++;
- else if (nPlaca == 5 || nPlaca == 6) {
-                roja++;
 
-else if (nPlaca == 8 || nPlaca == 9) {
-                    verde++;
-                }
-                else {
-                    azul++;
-                }
-                cont++;
 
-                alert('# de placas color amarillo: ' + amarilla + '\n# de placas color rosa: ' + rosa + '\n# de placas color rojo: ' + roja + '\n# de placas color averde: ' + verde + '\n# de placas color azul: ' + azul);
-            }  
+            
 
     
